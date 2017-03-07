@@ -1,5 +1,48 @@
 # Change Log
 
+## [v1.2.1](https://github.com/fog/fog-aws/tree/v1.2.1) (2017-02-27)
+[Full Changelog](https://github.com/fog/fog-aws/compare/v1.2.0...v1.2.1)
+
+**Closed issues:**
+
+- Fog mock does not mimmick real behaviour for some Excon errors [\#341](https://github.com/fog/fog-aws/issues/341)
+
+**Merged pull requests:**
+
+- Spot fixes [\#349](https://github.com/fog/fog-aws/pull/349) ([ehowe](https://github.com/ehowe))
+- add natGatewayId to describe\_route\_tables [\#346](https://github.com/fog/fog-aws/pull/346) ([mliao2](https://github.com/mliao2))
+- Fog mock accuracy, fixes \#341 [\#344](https://github.com/fog/fog-aws/pull/344) ([easkay](https://github.com/easkay))
+- Subnet [\#343](https://github.com/fog/fog-aws/pull/343) ([ehowe](https://github.com/ehowe))
+- Fix multipart upload [\#340](https://github.com/fog/fog-aws/pull/340) ([nobmurakita](https://github.com/nobmurakita))
+
+## [v1.2.0](https://github.com/fog/fog-aws/tree/v1.2.0) (2017-01-20)
+[Full Changelog](https://github.com/fog/fog-aws/compare/v1.1.0...v1.2.0)
+
+**Closed issues:**
+
+- Support for AWS Application Load Balancer \(ALB\) [\#335](https://github.com/fog/fog-aws/issues/335)
+
+**Merged pull requests:**
+
+- Better iam policies [\#339](https://github.com/fog/fog-aws/pull/339) ([ehowe](https://github.com/ehowe))
+- Pin nokogiri gem for Ruby 1.9 and Ruby 2.0 [\#337](https://github.com/fog/fog-aws/pull/337) ([sodabrew](https://github.com/sodabrew))
+- Fix parsing of the Reserved Instance 'recurringCharge' field and add 'scope' field [\#336](https://github.com/fog/fog-aws/pull/336) ([sodabrew](https://github.com/sodabrew))
+- Fixes / improvements for AutoScaling [\#334](https://github.com/fog/fog-aws/pull/334) ([lanej](https://github.com/lanej))
+
+## [v1.1.0](https://github.com/fog/fog-aws/tree/v1.1.0) (2016-12-16)
+[Full Changelog](https://github.com/fog/fog-aws/compare/v1.0.0...v1.1.0)
+
+**Closed issues:**
+
+- Support new Ohio region \(us-east-2\) [\#313](https://github.com/fog/fog-aws/issues/313)
+
+**Merged pull requests:**
+
+- Canada and London regions [\#333](https://github.com/fog/fog-aws/pull/333) ([mattheworiordan](https://github.com/mattheworiordan))
+- Updated ELB Dual Stack hosted zone DNS records [\#332](https://github.com/fog/fog-aws/pull/332) ([mattheworiordan](https://github.com/mattheworiordan))
+- Added support for attaching auto scaling groups to target groups [\#330](https://github.com/fog/fog-aws/pull/330) ([maf23](https://github.com/maf23))
+- credential\_fetcher: Mark AWS metadata calls as idempotent [\#329](https://github.com/fog/fog-aws/pull/329) ([mtekel](https://github.com/mtekel))
+
 ## [v1.0.0](https://github.com/fog/fog-aws/tree/v1.0.0) (2016-12-12)
 [Full Changelog](https://github.com/fog/fog-aws/compare/v0.13.0...v1.0.0)
 
