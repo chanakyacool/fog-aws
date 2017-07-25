@@ -219,7 +219,7 @@ module Fog
             data = service.put_object(directory.key, key, body, options)
             merge_attributes(data.headers.reject {|key, value| ['Content-Length', 'Content-Type'].include?(key)})
           end
-          self.etag.gsub!('"','')
+          self.etag.gsub!('"','') if self.etag
           self.content_length = Fog::Storage.get_body_size(body)
           self.content_type ||= Fog::Storage.get_content_type(body)
           true
@@ -273,6 +273,11 @@ module Fog
           end
           while (chunk = body.read(multipart_chunk_size)) do
             part_upload = service.upload_part(directory.key, key, upload_id, part_tags.size + 1, chunk, part_headers(chunk, options))
+            part_tags << part_upload.headers["ETag"]
+          end
+
+          if part_tags.empty? #it is an error to have a multipart upload with no parts
+            part_upload = service.upload_part(directory.key, key, upload_id, 1, '', part_headers('', options))
             part_tags << part_upload.headers["ETag"]
           end
 
